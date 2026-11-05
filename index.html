@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tan-No Nguyen</title>
+<meta name="description" content="Tan-No Nguyen (Nguyễn Tấn Nó) — Lecturer, Vinh Long University of Technology Education. Mechatronics, embedded systems, IoT, robotics, motion control.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#1d1f2e;--muted:#4a4d5c;--accent:#d93a1f;--ring:#d9475a;--line:#e3e3e6;--bg:#fff;--badge:#fff9e6;--badge-line:#f2d77a}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif",Georgia,serif;font-size:18px;line-height:1.7}
+  a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
+  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
+  header{text-align:center;padding:48px 0 20px;border-bottom:1px solid var(--line)}
+  header .site{font-size:2.2rem;margin:0 0 10px;font-weight:400}
+  nav{font-size:1.15rem} nav a{margin:0 2px} nav span{color:var(--muted)}
+  .hero{text-align:center;padding:24px 0 8px}
+  .avatar{width:150px;height:150px;border-radius:50%;border:6px solid var(--ring);object-fit:cover;box-shadow:0 10px 30px rgba(217,71,90,.25);display:block;margin:0 0 0 30px}
+  h1{font-size:2.8rem;margin:36px 0 10px;line-height:1.2}
+  .role{font-size:1.25rem;color:var(--muted);margin:0 0 28px}
+  .badge{display:inline-block;background:var(--badge);border:1px solid var(--badge-line);border-radius:24px;padding:8px 22px;font-family:"JetBrains Mono",monospace;font-size:.92rem}
+  section{padding:28px 0;border-bottom:1px solid var(--line)}
+  section:last-of-type{border-bottom:0}
+  h2{font-size:1.6rem;margin:0 0 14px}
+  .intro{text-align:center}
+  ul{padding-left:22px} li{margin:6px 0}
+  .pub{margin:0 0 16px} .pub .t{font-weight:700} .pub .v{color:var(--muted);font-style:italic}
+  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
+  .tags span{border:1px solid var(--line);border-radius:16px;padding:2px 12px;font-size:.9rem;color:var(--muted)}
+  .card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
+  .card b{display:block}
+  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px}
+  @media (max-width:600px){body{font-size:17px} h1{font-size:2.2rem} .avatar{margin:0 auto}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <p class="site">Tan-No Nguyen</p>
+  <nav>
+    <a href="#home">Home</a> <span>/</span> <a href="#publications">Publications</a> <span>/</span>
+    <a href="#projects">Students</a> <span>/</span> <a href="#resume">Resume</a> <span>/</span>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<main class="wrap">
+  <section id="home" class="hero" style="border-bottom:0">
+    <img class="avatar" src="https://avatars.githubusercontent.com/u/44743864?v=4" alt="Tan-No Nguyen">
+    <h1>Tan-No Nguyen</h1>
+    <p class="role">Lecturer, Vinh Long University of Technology Education, Vietnam · Faculty of Mechanical Engineering</p>
+    <span class="badge">🎓 Ph.D. in Mechatronics Engineering</span>
+  </section>
+
+  <section class="intro">
+    <p>I am a Lecturer at Vinh Long University of Technology Education (VLUTE), Vietnam, in the Faculty of Mechanical Engineering, and a member of the <a href="#projects">UAV Technology Research &amp; Training Center</a>. My research focuses on mechatronics, embedded systems and IoT, robotics, and motion control — from sensorless servo drives and sliding-mode control to field-oriented control of BLDC motors and connected lab platforms for students.</p>
+    <div class="tags">
+      <span>Mechatronics</span><span>Microcontrollers</span><span>Embedded &amp; IoT</span><span>Robotics</span><span>Motion Control</span><span>Sliding Mode Control</span><span>UAV</span>
+    </div>
+    <p style="margin-top:18px">
+      <a href="https://orcid.org/0009-0007-0297-8239">ORCID</a> ·
+      <a href="https://github.com/NGUYENTANNO">GitHub</a> ·
+      <a href="mailto:nont@vlute.edu.vn">Email</a>
+    </p>
+  </section>
+
+  <section id="publications">
+    <h2>Selected Publications</h2>
+    <div class="pub">
+      <div class="t">Efficient Sensorless Speed Estimation of Electrical Servo Drives Using a Full-Order Nonsingular Terminal Sliding Mode Observer</div>
+      <div class="v">Mathematical Problems in Engineering, 2021</div>
+      <a href="https://doi.org/10.1155/2021/8175848">DOI: 10.1155/2021/8175848</a>
+    </div>
+    <p>Full list on <a href="https://orcid.org/0009-0007-0297-8239">ORCID</a>.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Students &amp; Projects</h2>
+    <div class="card"><b>IoT Lab Platform</b>MQTT, Node-RED and InfluxDB server supporting 40 student groups in embedded &amp; IoT courses.</div>
+    <div class="card"><b>FOC Motion Control Bench</b>Position/speed control of gimbal BLDC motors with ESP32-S3, SimpleFOC and magnetic encoders.</div>
+    <div class="card"><b>Distributed Wireless Multi-Axis Control</b>Six single-motor axis modules coordinated by a central ESP32-S3 over wireless links.</div>
+    <div class="card"><b>EDUKIT ESP32-S3</b>Teaching board with CAN, RS-485, sensor ports and OLED for microcontroller labs.</div>
+    <div class="card"><b>Companion Robot for Children</b>ESP32 tracked robot car that talks with children and shows emotions.</div>
+    <div class="card"><b>Quadrotor Trajectory Tracking</b>Sliding-mode control of a quadrotor with varying payload, validated with Gazebo HIL.</div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <ul>
+      <li><b>Ph.D.</b>, Mechatronics Engineering</li>
+      <li><b>Lecturer</b>, Faculty of Mechanical Engineering, Vinh Long University of Technology Education</li>
+      <li><b>Member</b>, UAV Technology Research &amp; Training Center</li>
+    </ul>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Faculty of Mechanical Engineering<br>Vinh Long University of Technology Education<br>73 Nguyen Hue, Vinh Long, Vietnam</p>
+    <p>Email: <a href="mailto:nont@vlute.edu.vn">nont@vlute.edu.vn</a></p>
+  </section>
+</main>
+
+<footer>© <span id="y"></span> Tan-No Nguyen · Hosted on GitHub Pages</footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
