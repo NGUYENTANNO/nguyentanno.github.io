@@ -1,0 +1,114 @@
+media:
+  input: images
+  output: /images
+
+content:
+  - name: profile
+    label: "Thông tin cá nhân"
+    type: file
+    path: _data/profile.yml
+    fields:
+      - { name: name, label: "Họ tên (hiển thị)", type: string }
+      - { name: avatar, label: "Ảnh đại diện", type: image }
+      - { name: role_en, label: "Chức danh (EN)", type: string }
+      - { name: role_vi, label: "Chức danh (VI)", type: string }
+      - { name: badge_en, label: "Huy hiệu học vị (EN)", type: string }
+      - { name: badge_vi, label: "Huy hiệu học vị (VI)", type: string }
+      - { name: bio_en, label: "Giới thiệu (EN)", type: rich-text, options: { format: html } }
+      - { name: bio_vi, label: "Giới thiệu (VI)", type: rich-text, options: { format: html } }
+      - { name: orcid, label: "Link ORCID", type: string }
+      - { name: github, label: "Link GitHub", type: string }
+      - { name: email, label: "Email", type: string }
+      - { name: cv, label: "File CV (PDF, không bắt buộc)", type: file }
+      - { name: address_en, label: "Địa chỉ liên hệ (EN)", type: rich-text, options: { format: html } }
+      - { name: address_vi, label: "Địa chỉ liên hệ (VI)", type: rich-text, options: { format: html } }
+      - name: resume
+        label: "Lý lịch (Resume)"
+        type: object
+        list: true
+        fields:
+          - { name: en, label: "Dòng (EN)", type: rich-text, options: { format: html } }
+          - { name: vi, label: "Dòng (VI)", type: rich-text, options: { format: html } }
+
+  - name: research
+    label: "Định hướng nghiên cứu"
+    type: file
+    path: _data/research.yml
+    fields:
+      - { name: eyebrow, label: "Dòng chữ nhỏ phía trên", type: string }
+      - { name: lede_en, label: "Câu tuyên bố lớn (EN)", type: rich-text, options: { format: html } }
+      - { name: lede_vi, label: "Câu tuyên bố lớn (VI)", type: rich-text, options: { format: html } }
+      - { name: intro_en, label: "Đoạn mô tả (EN)", type: rich-text, options: { format: html } }
+      - { name: intro_vi, label: "Đoạn mô tả (VI)", type: rich-text, options: { format: html } }
+      - name: pillars
+        label: "Các trụ cột nghiên cứu"
+        type: object
+        list: true
+        fields:
+          - { name: id, label: "Mã trụ cột (viết liền, không dấu, ví dụ: motion)", type: string, required: true }
+          - name: color
+            label: "Màu"
+            type: select
+            options:
+              values:
+                - { name: red, label: "Đỏ" }
+                - { name: purple, label: "Tím" }
+                - { name: green, label: "Xanh lá" }
+                - { name: blue, label: "Xanh dương" }
+                - { name: orange, label: "Cam" }
+                - { name: teal, label: "Xanh ngọc" }
+                - { name: gray, label: "Xám" }
+          - { name: name_en, label: "Tên (EN)", type: string }
+          - { name: name_vi, label: "Tên (VI)", type: string }
+          - { name: keywords_en, label: "Từ khóa (EN)", type: string }
+          - { name: keywords_vi, label: "Từ khóa (VI)", type: string }
+          - { name: text_en, label: "Mô tả (EN)", type: text }
+          - { name: text_vi, label: "Mô tả (VI)", type: text }
+      - { name: callout_show, label: "Hiện khung tuyển sinh viên", type: boolean }
+      - { name: callout_title_en, label: "Tiêu đề khung (EN)", type: string }
+      - { name: callout_title_vi, label: "Tiêu đề khung (VI)", type: string }
+      - { name: callout_en, label: "Nội dung khung (EN)", type: rich-text, options: { format: html } }
+      - { name: callout_vi, label: "Nội dung khung (VI)", type: rich-text, options: { format: html } }
+
+  - name: publications
+    label: "Công bố khoa học"
+    type: file
+    path: _data/publications.yml
+    list: true
+    fields:
+      - { name: title, label: "Tên bài báo", type: string, required: true }
+      - { name: authors, label: "Tác giả (ví dụ: With A. Tran & B. Le)", type: string }
+      - { name: venue, label: "Tạp chí / Hội nghị (in đỏ)", type: string }
+      - { name: details, label: "Chi tiết (năm, tập, nơi tổ chức...)", type: string }
+      - name: pillar
+        label: "Trụ cột (mã: motion, iot, robotics, edu)"
+        type: string
+      - { name: status, label: "Trạng thái (ví dụ: To appear — để trống nếu đã xuất bản)", type: string }
+      - { name: keywords, label: "Từ khóa", type: string, list: true }
+      - { name: link, label: "Link DOI / bài báo", type: string }
+      - { name: abstract, label: "Tóm tắt (Abstract)", type: text }
+      - { name: bibtex, label: "BibTeX", type: code }
+
+  - name: projects
+    label: "Dự án & Sinh viên"
+    type: file
+    path: _data/projects.yml
+    list: true
+    fields:
+      - { name: pillar, label: "Trụ cột (mã: motion, iot, robotics, edu)", type: string }
+      - { name: name_en, label: "Tên dự án (EN)", type: string }
+      - { name: name_vi, label: "Tên dự án (VI)", type: string }
+      - { name: text_en, label: "Mô tả (EN)", type: text }
+      - { name: text_vi, label: "Mô tả (VI)", type: text }
+      - { name: link, label: "Link (không bắt buộc)", type: string }
+
+  - name: talks
+    label: "Báo cáo mời"
+    type: file
+    path: _data/talks.yml
+    list: true
+    fields:
+      - { name: title, label: "Tên báo cáo", type: string }
+      - { name: event, label: "Sự kiện", type: string }
+      - { name: details, label: "Chi tiết (địa điểm, ngày...)", type: string }
+      - { name: slides, label: "Slides (link hoặc file)", type: file }
