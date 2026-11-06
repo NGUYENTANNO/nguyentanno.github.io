@@ -1,0 +1,49 @@
+eyebrow: Motion Control · Embedded & IoT · Robotics
+lede_en: >-
+  <p>I build machines that <strong>move precisely</strong>, <strong>sense their own state</strong>, and <strong>connect</strong> to the people who learn from them.</p>
+lede_vi: >-
+  <p>Tôi xây dựng những hệ thống <strong>chuyển động chính xác</strong>, <strong>tự cảm nhận trạng thái</strong> và <strong>kết nối</strong> với người học.</p>
+intro_en: >-
+  <p>My work joins control theory with hardware that students can build and test: robust observers and controllers for drives, embedded and IoT platforms that carry them, and robots and UAVs that put them to work. Four pillars carry that agenda — click a pillar to see only its papers and projects.</p>
+intro_vi: >-
+  <p>Công việc của tôi gắn lý thuyết điều khiển với phần cứng mà sinh viên có thể tự làm và thử nghiệm: bộ quan sát và bộ điều khiển bền vững cho truyền động, nền tảng nhúng và IoT, cùng robot và UAV ứng dụng chúng. Bốn trụ cột dưới đây — bấm vào một trụ cột để chỉ xem các công bố và dự án thuộc trụ cột đó.</p>
+pillars:
+  - id: motion
+    color: red
+    name_en: Motion Control & Drives
+    name_vi: Điều khiển chuyển động & Truyền động
+    keywords_en: Sliding mode · observers · FOC · servo drives
+    keywords_vi: Điều khiển trượt · bộ quan sát · FOC · servo
+    text_en: Robust estimation and control for electric drives — sensorless speed observers, terminal sliding-mode control and field-oriented control of BLDC motors.
+    text_vi: Ước lượng và điều khiển bền vững cho truyền động điện — bộ quan sát tốc độ không cảm biến, điều khiển trượt đầu cuối và điều khiển FOC động cơ BLDC.
+  - id: iot
+    color: purple
+    name_en: Embedded Systems & IoT
+    name_vi: Hệ thống nhúng & IoT
+    keywords_en: ESP32 · MQTT · Node-RED · InfluxDB
+    keywords_vi: ESP32 · MQTT · Node-RED · InfluxDB
+    text_en: Microcontroller and connected platforms that carry control and sensing into the field and the classroom.
+    text_vi: Nền tảng vi điều khiển và hệ thống kết nối đưa điều khiển, đo lường vào thực tế và lớp học.
+  - id: robotics
+    color: green
+    name_en: Robotics & UAV
+    name_vi: Robot & UAV
+    keywords_en: Quadrotor · trajectory tracking · mobile robots
+    keywords_vi: Quadrotor · bám quỹ đạo · robot di động
+    text_en: Robots and aerial vehicles that need precise, robust control under changing payloads and environments.
+    text_vi: Robot và thiết bị bay cần điều khiển chính xác, bền vững khi tải trọng và môi trường thay đổi.
+  - id: edu
+    color: blue
+    name_en: Mechatronics Education
+    name_vi: Đào tạo Cơ điện tử
+    keywords_en: Teaching kits · lab platforms · hands-on learning
+    keywords_vi: Bộ kit giảng dạy · nền tảng thí nghiệm · thực hành
+    text_en: Hardware kits and lab infrastructure that let students learn mechatronics by building and testing real systems.
+    text_vi: Bộ kit và hạ tầng thí nghiệm giúp sinh viên học cơ điện tử bằng cách tự làm và thử nghiệm hệ thống thật.
+callout_show: true
+callout_title_en: Looking for motivated students
+callout_title_vi: Tìm sinh viên đam mê nghiên cứu
+callout_en: >-
+  <p>I work on motion control, embedded systems and IoT, robotics and UAVs, with hands-on platforms built in our lab. I am looking for motivated students who enjoy turning ideas into working hardware.</p><p>If that sounds like you, please <a href="#contact">get in touch</a>. See our <a href="#projects">current projects</a>.</p>
+callout_vi: >-
+  <p>Nhóm tôi làm về điều khiển chuyển động, hệ thống nhúng và IoT, robot và UAV, với các nền tảng thực hành tự phát triển trong phòng thí nghiệm. Tôi tìm các bạn sinh viên thích biến ý tưởng thành phần cứng chạy được.</p><p>Nếu bạn quan tâm, hãy <a href="#contact">liên hệ</a>. Xem các <a href="#projects">dự án hiện tại</a>.</p>
