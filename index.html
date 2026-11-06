@@ -4,104 +4,359 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tan-No Nguyen</title>
-<meta name="description" content="Tan-No Nguyen (Nguyễn Tấn Nó) — Lecturer, Vinh Long University of Technology Education. Mechatronics, embedded systems, IoT, robotics, motion control.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=JetBrains+Mono&display=swap" rel="stylesheet">
+<meta name="description" content="Tan-No Nguyen — Lecturer, Vinh Long University of Technology Education. Mechatronics, embedded systems & IoT, robotics, motion control.">
 <style>
-  :root{--ink:#1d1f2e;--muted:#4a4d5c;--accent:#d93a1f;--ring:#d9475a;--line:#e3e3e6;--bg:#fff;--badge:#fff9e6;--badge-line:#f2d77a}
+  :root{
+    --ink:#1b1b2f; --text:#2b2b36; --muted:#5f6070; --line:#e7e3e6;
+    --accent:#d63c62; --accent-soft:#fdf1f4;
+    --p1:#c0392b; --p2:#8e44ad; --p3:#27ae60; --p4:#2e86c1;
+    --serif:"Times New Roman", Times, "Liberation Serif", serif;
+    --mono:ui-monospace, "SFMono-Regular", Menlo, Consolas, "Liberation Mono", monospace;
+  }
   *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Noto Serif",Georgia,serif;font-size:18px;line-height:1.7}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:#fff;color:var(--text);font:17px/1.65 var(--serif)}
   a{color:var(--accent);text-decoration:none} a:hover{text-decoration:underline}
-  .wrap{max-width:760px;margin:0 auto;padding:0 20px}
-  header{text-align:center;padding:48px 0 20px;border-bottom:1px solid var(--line)}
-  header .site{font-size:2.2rem;margin:0 0 10px;font-weight:400}
-  nav{font-size:1.15rem} nav a{margin:0 2px} nav span{color:var(--muted)}
-  .hero{text-align:center;padding:24px 0 8px}
-  .avatar{width:150px;height:150px;border-radius:50%;border:6px solid var(--ring);object-fit:cover;box-shadow:0 10px 30px rgba(217,71,90,.25);display:block;margin:0 0 0 30px}
-  h1{font-size:2.8rem;margin:36px 0 10px;line-height:1.2}
-  .role{font-size:1.25rem;color:var(--muted);margin:0 0 28px}
-  .badge{display:inline-block;background:var(--badge);border:1px solid var(--badge-line);border-radius:24px;padding:8px 22px;font-family:"JetBrains Mono",monospace;font-size:.92rem}
-  section{padding:28px 0;border-bottom:1px solid var(--line)}
-  section:last-of-type{border-bottom:0}
-  h2{font-size:1.6rem;margin:0 0 14px}
-  .intro{text-align:center}
-  ul{padding-left:22px} li{margin:6px 0}
-  .pub{margin:0 0 16px} .pub .t{font-weight:700} .pub .v{color:var(--muted);font-style:italic}
-  .tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:16px}
-  .tags span{border:1px solid var(--line);border-radius:16px;padding:2px 12px;font-size:.9rem;color:var(--muted)}
-  .card{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:12px 0}
-  .card b{display:block}
-  footer{text-align:center;color:var(--muted);font-size:.85rem;padding:30px 0 40px}
-  @media (max-width:600px){body{font-size:17px} h1{font-size:2.2rem} .avatar{margin:0 auto}}
+  .wrap{max-width:760px;margin:0 auto;padding:0 16px}
+
+  /* language toggle */
+  body.vi .en, body:not(.vi) .vi{display:none !important}
+
+  /* top bar */
+  header.top{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(6px);border-bottom:1px solid transparent}
+  header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:22px;padding-bottom:14px;flex-wrap:wrap}
+  .brand{font-size:24px;color:var(--ink)}
+  nav{display:flex;align-items:center;gap:6px;flex-wrap:wrap;font-size:15px}
+  nav a{color:var(--accent)} nav a::after{content:" /";color:var(--muted)} nav a.last::after{content:""}
+  .lang{margin-left:14px;font:12px var(--mono);color:var(--muted)}
+  .lang button{border:0;background:none;padding:0 3px;font:inherit;color:var(--muted);cursor:pointer}
+  .lang button.on{color:var(--ink);font-weight:700}
+
+  /* hero */
+  .hero{display:grid;grid-template-columns:120px 1fr;gap:36px;padding:28px 0 20px}
+  .avatar{display:block;width:110px;height:110px;flex-shrink:0;border-radius:50%;object-fit:cover;border:3px solid var(--accent);box-shadow:0 6px 18px rgba(214,60,98,.25)}
+  h1{font-size:40px;line-height:1.15;margin:18px 0 14px;color:var(--ink)}
+  .role{margin:0 0 16px;color:var(--text)}
+  .badge{display:inline-block;font:12px/1.4 var(--mono);background:#fff8e1;border:1px solid #f3d27a;color:#6b5300;border-radius:999px;padding:5px 12px;margin-bottom:18px}
+  .hero p{margin:0 0 14px}
+  .links{font-size:16px}
+
+  /* sections */
+  section{padding:34px 0 8px}
+  h2{font-size:30px;color:var(--ink);margin:0 0 22px;display:inline-block;padding-bottom:10px;border-bottom:3px solid var(--accent)}
+  .eyebrow{font:13px var(--mono);letter-spacing:.08em;color:var(--accent);text-transform:uppercase;margin:0 0 14px}
+  .lede{font-size:22px;line-height:1.5;color:var(--ink);margin:0 0 16px}
+  .lede b{color:var(--accent)}
+  .sub{color:var(--muted);margin:0 0 24px}
+
+  /* pillars */
+  .pillars{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  .pillar{border:1px solid var(--line);border-top:3px solid var(--c);border-radius:10px;padding:18px 20px 14px;cursor:pointer;background:#fff;text-align:left;font:inherit;color:inherit;transition:box-shadow .15s, transform .15s}
+  .pillar:hover{box-shadow:0 6px 18px rgba(0,0,0,.07);transform:translateY(-1px)}
+  .pillar.active{box-shadow:0 0 0 2px var(--c) inset}
+  .pillar .num{font:13px var(--mono);color:var(--c)}
+  .pillar h3{font-size:20px;margin:6px 0 8px;color:var(--ink)}
+  .pillar .kw{font:12.5px/1.5 var(--mono);color:var(--c);margin-bottom:10px}
+  .pillar p{font-size:15.5px;color:var(--muted);margin:0 0 12px}
+  .pillar{display:flex;flex-direction:column;justify-content:flex-start}
+  .pillar .count{margin-top:auto;border-top:1px solid var(--line);padding-top:10px;font:12.5px var(--mono);color:var(--muted)}
+
+  /* callout */
+  .callout{margin:28px 0 0;background:var(--accent-soft);border-left:4px solid var(--accent);border-radius:4px;padding:18px 20px}
+  .callout p{margin:0 0 10px} .callout p:last-child{margin:0}
+
+  /* filters */
+  .filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:22px}
+  .chip{font:12.5px var(--mono);border:1px solid var(--line);background:#fafafa;border-radius:999px;padding:5px 12px;cursor:pointer;color:var(--text)}
+  .chip.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .total{font:12.5px var(--mono);color:var(--muted)}
+
+  /* publications */
+  .pub{display:grid;grid-template-columns:44px 1fr;gap:4px;margin-bottom:26px}
+  .pub .idx{font:14px var(--mono);color:var(--accent)}
+  .pub .tag{font:12px var(--mono);letter-spacing:.06em;text-transform:uppercase;border-left:2px solid var(--c);padding-left:8px;color:var(--c)}
+  .pub .title{font-style:italic;font-weight:700;color:var(--ink);margin:4px 0 2px}
+  .pub .venue{color:#d0021b;font-weight:700}
+  .pub .venue span{color:var(--muted);font-weight:400}
+  .kws{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+  .kws span{font:12px var(--mono);border:1px solid var(--line);background:#f6f6f7;border-radius:4px;padding:2px 8px}
+  .btns{display:flex;gap:8px;flex-wrap:wrap}
+  .btn{font:12.5px var(--mono);border:1px solid var(--line);background:#fff;border-radius:4px;padding:4px 10px;cursor:pointer;color:var(--text)}
+  .btn:hover{border-color:var(--accent)}
+  .drawer{display:none;margin-top:8px;background:#f7f7f9;border:1px solid var(--line);border-radius:6px;padding:12px 14px;font-size:15px}
+  .drawer.open{display:block}
+  pre.drawer{font:12.5px/1.5 var(--mono);white-space:pre-wrap;overflow-x:auto}
+  .empty{color:var(--muted);font-style:italic}
+
+  /* projects */
+  .projects{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .proj{border:1px solid var(--line);border-left:3px solid var(--c);border-radius:8px;padding:14px 16px}
+  .proj .tag{font:11.5px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--c)}
+  .proj h3{font-size:18px;margin:4px 0 6px;color:var(--ink)}
+  .proj p{margin:0;font-size:15.5px;color:var(--muted)}
+
+  /* resume / contact */
+  ul.cv{list-style:none;padding:0;margin:0}
+  ul.cv li{position:relative;padding-left:22px;margin-bottom:10px}
+  ul.cv li::before{content:"▸";position:absolute;left:0;color:var(--accent)}
+  footer{border-top:1px solid var(--line);margin-top:40px;padding:20px 0 40px;color:var(--muted);font-size:14px}
+
+  @media (max-width:640px){
+    body{font-size:16px}
+    header.top{position:static}
+    .hero{grid-template-columns:1fr;gap:4px}
+    h1{font-size:32px;margin-top:10px}
+    .pillars,.projects{grid-template-columns:1fr}
+    .lede{font-size:19px}
+    .pub{grid-template-columns:36px 1fr}
+  }
 </style>
 </head>
 <body>
-<header class="wrap">
-  <p class="site">Tan-No Nguyen</p>
-  <nav>
-    <a href="#home">Home</a> <span>/</span> <a href="#publications">Publications</a> <span>/</span>
-    <a href="#projects">Students</a> <span>/</span> <a href="#resume">Resume</a> <span>/</span>
-    <a href="#contact">Contact</a>
-  </nav>
+
+<header class="top">
+  <div class="wrap">
+    <div class="brand">Tan-No Nguyen</div>
+    <nav>
+      <a href="#home"><span class="en">Home</span><span class="vi">Trang chủ</span></a>
+      <a href="#research"><span class="en">Research</span><span class="vi">Nghiên cứu</span></a>
+      <a href="#publications"><span class="en">Publications</span><span class="vi">Công bố</span></a>
+      <a href="#projects"><span class="en">Projects</span><span class="vi">Dự án</span></a>
+      <a href="#resume"><span class="en">Resume</span><span class="vi">Lý lịch</span></a>
+      <a href="#contact" class="last"><span class="en">Contact</span><span class="vi">Liên hệ</span></a>
+      <span class="lang"><button data-lang="en" class="on">EN</button>|<button data-lang="vi">VI</button></span>
+    </nav>
+  </div>
 </header>
 
 <main class="wrap">
-  <section id="home" class="hero" style="border-bottom:0">
-    <img class="avatar" src="https://avatars.githubusercontent.com/u/44743864?v=4" alt="Tan-No Nguyen">
-    <h1>Tan-No Nguyen</h1>
-    <p class="role">Lecturer, Vinh Long University of Technology Education, Vietnam · Faculty of Mechanical Engineering</p>
-    <span class="badge">🎓 Ph.D. in Mechatronics Engineering</span>
-  </section>
 
-  <section class="intro">
-    <p>I am a Lecturer at Vinh Long University of Technology Education (VLUTE), Vietnam, in the Faculty of Mechanical Engineering, and a member of the <a href="#projects">UAV Technology Research &amp; Training Center</a>. My research focuses on mechatronics, embedded systems and IoT, robotics, and motion control — from sensorless servo drives and sliding-mode control to field-oriented control of BLDC motors and connected lab platforms for students.</p>
-    <div class="tags">
-      <span>Mechatronics</span><span>Microcontrollers</span><span>Embedded &amp; IoT</span><span>Robotics</span><span>Motion Control</span><span>Sliding Mode Control</span><span>UAV</span>
+  <!-- ============ HOME ============ -->
+  <div class="hero" id="home">
+    <div><img class="avatar" src="https://avatars.githubusercontent.com/u/44743864?v=4" alt="Tan-No Nguyen"></div>
+    <div>
+      <h1>Tan-No Nguyen</h1>
+      <p class="role">
+        <span class="en">Lecturer, Vinh Long University of Technology Education, Vietnam · Faculty of Mechanical Engineering</span>
+        <span class="vi">Giảng viên, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long · Khoa Cơ khí</span>
+      </p>
+      <div class="badge"><span class="en">🎓 Ph.D. in Mechatronics Engineering</span><span class="vi">🎓 Tiến sĩ Kỹ thuật Cơ điện tử</span></div>
+      <p class="en">I am a Lecturer at Vinh Long University of Technology Education (VLUTE), Vietnam, in the Faculty of Mechanical Engineering, and a member of the <a href="#research">UAV Technology Research &amp; Training Center</a>. My research focuses on <b>mechatronics</b>, <b>embedded systems and IoT</b>, <b>robotics</b>, and <b>motion control</b> — from sensorless servo drives and sliding-mode control to field-oriented control of BLDC motors and connected lab platforms for students.</p>
+      <p class="vi">Tôi là giảng viên Khoa Cơ khí, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long (VLUTE), đồng thời là thành viên <a href="#research">Trung tâm Nghiên cứu và Đào tạo Công nghệ UAV</a>. Hướng nghiên cứu chính: <b>cơ điện tử</b>, <b>hệ thống nhúng và IoT</b>, <b>robot</b> và <b>điều khiển chuyển động</b> — từ ước lượng tốc độ không cảm biến cho servo, điều khiển trượt, đến điều khiển FOC động cơ BLDC và nền tảng thí nghiệm kết nối cho sinh viên.</p>
+      <p class="links"><a href="https://orcid.org/0009-0007-0297-8239">ORCID</a> · <a href="https://github.com/NGUYENTANNO">GitHub</a> · <a href="mailto:nont@vlute.edu.vn">Email</a></p>
     </div>
-    <p style="margin-top:18px">
-      <a href="https://orcid.org/0009-0007-0297-8239">ORCID</a> ·
-      <a href="https://github.com/NGUYENTANNO">GitHub</a> ·
-      <a href="mailto:nont@vlute.edu.vn">Email</a>
-    </p>
+  </div>
+
+  <!-- ============ RESEARCH VISION ============ -->
+  <section id="research">
+    <h2><span class="en">Research Vision</span><span class="vi">Định hướng nghiên cứu</span></h2>
+    <p class="eyebrow">Motion Control · Embedded &amp; IoT · Robotics</p>
+    <p class="lede en">I build machines that <b>move precisely</b>, <b>sense their own state</b>, and <b>connect</b> to the people who learn from them.</p>
+    <p class="lede vi">Tôi xây dựng những hệ thống <b>chuyển động chính xác</b>, <b>tự cảm nhận trạng thái</b> và <b>kết nối</b> với người học.</p>
+    <p class="sub en">My work joins control theory with hardware that students can build and test: robust observers and controllers for drives, embedded and IoT platforms that carry them, and robots and UAVs that put them to work. Four pillars carry that agenda — click a pillar to see only its papers and projects.</p>
+    <p class="sub vi">Công việc của tôi gắn lý thuyết điều khiển với phần cứng mà sinh viên có thể tự làm và thử nghiệm: bộ quan sát và bộ điều khiển bền vững cho truyền động, nền tảng nhúng và IoT, cùng robot và UAV ứng dụng chúng. Bốn trụ cột dưới đây — bấm vào một trụ cột để chỉ xem các công bố và dự án thuộc trụ cột đó.</p>
+
+    <div class="pillars" id="pillars"></div>
+
+    <div class="callout">
+      <p class="eyebrow" style="margin-bottom:8px"><span class="en">Looking for motivated students</span><span class="vi">Tìm sinh viên đam mê nghiên cứu</span></p>
+      <p class="en">I work on motion control, embedded systems and IoT, robotics and UAVs, with hands-on platforms built in our lab. I am looking for motivated students who enjoy turning ideas into working hardware.</p>
+      <p class="vi">Nhóm tôi làm về điều khiển chuyển động, hệ thống nhúng và IoT, robot và UAV, với các nền tảng thực hành tự phát triển trong phòng thí nghiệm. Tôi tìm các bạn sinh viên thích biến ý tưởng thành phần cứng chạy được.</p>
+      <p><span class="en">If that sounds like you, please <a href="#contact">get in touch</a>. See what our <a href="#projects">current projects</a> are.</span><span class="vi">Nếu bạn quan tâm, hãy <a href="#contact">liên hệ</a>. Xem các <a href="#projects">dự án hiện tại</a>.</span></p>
+    </div>
   </section>
 
+  <!-- ============ INVITED TALKS (hidden when list is empty) ============ -->
+  <section id="talks" hidden>
+    <h2><span class="en">Invited Talks</span><span class="vi">Báo cáo mời</span></h2>
+    <div id="talk-list"></div>
+  </section>
+
+  <!-- ============ PUBLICATIONS ============ -->
   <section id="publications">
-    <h2>Selected Publications</h2>
-    <div class="pub">
-      <div class="t">Efficient Sensorless Speed Estimation of Electrical Servo Drives Using a Full-Order Nonsingular Terminal Sliding Mode Observer</div>
-      <div class="v">Mathematical Problems in Engineering, 2021</div>
-      <a href="https://doi.org/10.1155/2021/8175848">DOI: 10.1155/2021/8175848</a>
-    </div>
-    <p>Full list on <a href="https://orcid.org/0009-0007-0297-8239">ORCID</a>.</p>
+    <h2><span class="en">Publications</span><span class="vi">Công bố khoa học</span></h2>
+    <div class="filters" id="pub-filters"></div>
+    <div id="pub-list"></div>
+    <p><span class="en">Full list on</span><span class="vi">Danh sách đầy đủ trên</span> <a href="https://orcid.org/0009-0007-0297-8239">ORCID</a>.</p>
   </section>
 
+  <!-- ============ PROJECTS ============ -->
   <section id="projects">
-    <h2>Students &amp; Projects</h2>
-    <div class="card"><b>IoT Lab Platform</b>MQTT, Node-RED and InfluxDB server supporting 40 student groups in embedded &amp; IoT courses.</div>
-    <div class="card"><b>FOC Motion Control Bench</b>Position/speed control of gimbal BLDC motors with ESP32-S3, SimpleFOC and magnetic encoders.</div>
-    <div class="card"><b>Distributed Wireless Multi-Axis Control</b>Six single-motor axis modules coordinated by a central ESP32-S3 over wireless links.</div>
-    <div class="card"><b>EDUKIT ESP32-S3</b>Teaching board with CAN, RS-485, sensor ports and OLED for microcontroller labs.</div>
-    <div class="card"><b>Companion Robot for Children</b>ESP32 tracked robot car that talks with children and shows emotions.</div>
-    <div class="card"><b>Quadrotor Trajectory Tracking</b>Sliding-mode control of a quadrotor with varying payload, validated with Gazebo HIL.</div>
+    <h2><span class="en">Students &amp; Projects</span><span class="vi">Sinh viên &amp; Dự án</span></h2>
+    <div class="projects" id="proj-list"></div>
   </section>
 
+  <!-- ============ RESUME ============ -->
   <section id="resume">
-    <h2>Resume</h2>
-    <ul>
-      <li><b>Ph.D.</b>, Mechatronics Engineering</li>
-      <li><b>Lecturer</b>, Faculty of Mechanical Engineering, Vinh Long University of Technology Education</li>
-      <li><b>Member</b>, UAV Technology Research &amp; Training Center</li>
+    <h2><span class="en">Resume</span><span class="vi">Lý lịch</span></h2>
+    <ul class="cv">
+      <li><span class="en"><b>Ph.D.</b>, Mechatronics Engineering</span><span class="vi"><b>Tiến sĩ</b>, Kỹ thuật Cơ điện tử</span></li>
+      <li><span class="en"><b>Lecturer</b>, Faculty of Mechanical Engineering, Vinh Long University of Technology Education</span><span class="vi"><b>Giảng viên</b>, Khoa Cơ khí, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long</span></li>
+      <li><span class="en"><b>Member</b>, UAV Technology Research &amp; Training Center</span><span class="vi"><b>Thành viên</b>, Trung tâm Nghiên cứu và Đào tạo Công nghệ UAV</span></li>
     </ul>
   </section>
 
+  <!-- ============ CONTACT ============ -->
   <section id="contact">
-    <h2>Contact</h2>
-    <p>Faculty of Mechanical Engineering<br>Vinh Long University of Technology Education<br>73 Nguyen Hue, Vinh Long, Vietnam</p>
+    <h2><span class="en">Contact</span><span class="vi">Liên hệ</span></h2>
+    <p class="en">Faculty of Mechanical Engineering<br>Vinh Long University of Technology Education<br>73 Nguyen Hue, Vinh Long, Vietnam</p>
+    <p class="vi">Khoa Cơ khí<br>Trường Đại học Công nghệ Kỹ thuật Vĩnh Long<br>73 Nguyễn Huệ, Vĩnh Long, Việt Nam</p>
     <p>Email: <a href="mailto:nont@vlute.edu.vn">nont@vlute.edu.vn</a></p>
   </section>
+
+  <footer>© <span id="yr"></span> Tan-No Nguyen · <span class="en">Hosted on GitHub Pages</span><span class="vi">Lưu trữ trên GitHub Pages</span></footer>
 </main>
 
-<footer>© <span id="y"></span> Tan-No Nguyen · Hosted on GitHub Pages</footer>
-<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+<script>
+/* =====================================================================
+   NỘI DUNG — chỉ cần sửa phần dữ liệu dưới đây để cập nhật trang.
+   ===================================================================== */
+
+// 4 trụ cột nghiên cứu (id dùng để gắn bài báo / dự án)
+const PILLARS = [
+  { id:"motion", color:"var(--p1)",
+    en:{ name:"Motion Control & Drives", kw:"Sliding mode · observers · FOC · servo drives",
+         text:"Robust estimation and control for electric drives: sensorless speed observers, terminal sliding-mode control and field-oriented control of BLDC motors." },
+    vi:{ name:"Điều khiển chuyển động & Truyền động", kw:"Điều khiển trượt · bộ quan sát · FOC · servo",
+         text:"Ước lượng và điều khiển bền vững cho truyền động điện: bộ quan sát tốc độ không cảm biến, điều khiển trượt đầu cuối và điều khiển FOC động cơ BLDC." } },
+  { id:"iot", color:"var(--p2)",
+    en:{ name:"Embedded Systems & IoT", kw:"ESP32 · MQTT · Node-RED · InfluxDB",
+         text:"Microcontroller and connected platforms that carry control and sensing into the field and the classroom." },
+    vi:{ name:"Hệ thống nhúng & IoT", kw:"ESP32 · MQTT · Node-RED · InfluxDB",
+         text:"Nền tảng vi điều khiển và hệ thống kết nối đưa điều khiển, đo lường vào thực tế và lớp học." } },
+  { id:"robotics", color:"var(--p3)",
+    en:{ name:"Robotics & UAV", kw:"Quadrotor · trajectory tracking · mobile robots",
+         text:"Robots and aerial vehicles that need precise, robust control under changing payloads and environments." },
+    vi:{ name:"Robot & UAV", kw:"Quadrotor · bám quỹ đạo · robot di động",
+         text:"Robot và thiết bị bay cần điều khiển chính xác, bền vững khi tải trọng và môi trường thay đổi." } },
+  { id:"edu", color:"var(--p4)",
+    en:{ name:"Mechatronics Education", kw:"Teaching kits · lab platforms · hands-on learning",
+         text:"Hardware kits and lab infrastructure that let students learn mechatronics by building and testing real systems." },
+    vi:{ name:"Đào tạo Cơ điện tử", kw:"Bộ kit giảng dạy · nền tảng thí nghiệm · thực hành",
+         text:"Bộ kit và hạ tầng thí nghiệm giúp sinh viên học cơ điện tử bằng cách tự làm và thử nghiệm hệ thống thật." } },
+];
+
+// Công bố — thêm bài mới lên ĐẦU danh sách. abstract / bibtex để trống thì nút tương ứng tự ẩn.
+const PUBLICATIONS = [
+  { pillar:"motion",
+    authors:"",
+    title:"Efficient Sensorless Speed Estimation of Electrical Servo Drives Using a Full-Order Nonsingular Terminal Sliding Mode Observer",
+    venue:"Mathematical Problems in Engineering", where:"2021",
+    status:"",
+    keywords:["Sensorless control","Sliding mode observer","Servo drives"],
+    url:"https://doi.org/10.1155/2021/8175848",
+    abstract:"",
+    bibtex:"" },
+];
+
+// Báo cáo mời — để trống [] thì mục này tự ẩn.
+const TALKS = [
+  // { title:"...", event:"...", detail:"...", slides:"https://..." },
+];
+
+// Dự án
+const PROJECTS = [
+  { pillar:"iot", en:["IoT Lab Platform","MQTT, Node-RED and InfluxDB server supporting 40 student groups in embedded & IoT courses."],
+                  vi:["Nền tảng thí nghiệm IoT","Máy chủ MQTT, Node-RED và InfluxDB phục vụ 40 nhóm sinh viên các học phần nhúng & IoT."] },
+  { pillar:"motion", en:["FOC Motion Control Bench","Position/speed control of gimbal BLDC motors with ESP32-S3, SimpleFOC and magnetic encoders."],
+                     vi:["Bàn thí nghiệm điều khiển FOC","Điều khiển vị trí/tốc độ động cơ BLDC gimbal với ESP32-S3, SimpleFOC và encoder từ."] },
+  { pillar:"motion", en:["Distributed Wireless Multi-Axis Control","Six single-motor axis modules coordinated by a central ESP32-S3 over wireless links."],
+                     vi:["Điều khiển đa trục phân tán không dây","Sáu module trục đơn động cơ được điều phối bởi ESP32-S3 trung tâm qua kết nối không dây."] },
+  { pillar:"edu", en:["EDUKIT ESP32-S3","Teaching board with CAN, RS-485, sensor ports and OLED for microcontroller labs."],
+                  vi:["EDUKIT ESP32-S3","Bo mạch giảng dạy có CAN, RS-485, cổng cảm biến và OLED cho các bài thí nghiệm vi điều khiển."] },
+  { pillar:"robotics", en:["Companion Robot for Children","ESP32 tracked robot car that talks with children and shows emotions."],
+                       vi:["Robot bạn đồng hành cho trẻ em","Xe robot bánh xích ESP32 trò chuyện với trẻ và thể hiện cảm xúc."] },
+  { pillar:"robotics", en:["Quadrotor Trajectory Tracking","Sliding-mode control of a quadrotor with varying payload, validated with Gazebo HIL."],
+                       vi:["Bám quỹ đạo cho quadrotor","Điều khiển trượt quadrotor với tải trọng thay đổi, kiểm chứng bằng Gazebo HIL."] },
+];
+
+/* =====================================================================
+   PHẦN HIỂN THỊ — không cần sửa.
+   ===================================================================== */
+let lang = "en", filter = "all";
+try { if (localStorage.getItem("lang")==="vi") lang = "vi"; } catch(e){}
+const P = Object.fromEntries(PILLARS.map((p,i)=>[p.id,{...p,num:String(i+1).padStart(2,"0")}]));
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const T = (en,vi) => lang==="vi" ? vi : en;
+
+function renderPillars(){
+  document.getElementById("pillars").innerHTML = PILLARS.map(p=>{
+    const n = PUBLICATIONS.filter(x=>x.pillar===p.id).length, m = PROJECTS.filter(x=>x.pillar===p.id).length;
+    const d = p[lang];
+    return `<button class="pillar ${filter===p.id?"active":""}" style="--c:${p.color}" data-p="${p.id}">
+      <div class="num">${P[p.id].num}</div><h3>${esc(d.name)}</h3><div class="kw">${esc(d.kw)}</div>
+      <p>${esc(d.text)}</p><div class="count">${n} ${T(n===1?"paper":"papers","bài báo")} · ${m} ${T(m===1?"project":"projects","dự án")} →</div></button>`;
+  }).join("");
+  document.querySelectorAll(".pillar").forEach(b=>b.onclick=()=>{
+    setFilter(filter===b.dataset.p?"all":b.dataset.p);
+    document.getElementById("publications").scrollIntoView();
+  });
+}
+
+function renderFilters(){
+  const chips = [{id:"all",label:T("All","Tất cả")}, ...PILLARS.map(p=>({id:p.id,label:p[lang].name}))];
+  const shown = PUBLICATIONS.filter(x=>filter==="all"||x.pillar===filter).length;
+  document.getElementById("pub-filters").innerHTML =
+    chips.map(c=>`<button class="chip ${filter===c.id?"on":""}" data-f="${c.id}">${esc(c.label)}</button>`).join("") +
+    `<span class="total">${shown} ${T(shown===1?"paper":"papers","bài báo")}</span>`;
+  document.querySelectorAll(".chip").forEach(c=>c.onclick=()=>setFilter(c.dataset.f));
+}
+
+function renderPubs(){
+  const total = PUBLICATIONS.length;
+  const items = PUBLICATIONS.map((p,i)=>({...p,n:total-i})).filter(x=>filter==="all"||x.pillar===filter);
+  const el = document.getElementById("pub-list");
+  if(!items.length){ el.innerHTML = `<p class="empty">${T("No papers in this pillar yet.","Chưa có bài báo trong trụ cột này.")}</p>`; return; }
+  el.innerHTML = items.map(p=>{
+    const pl = P[p.pillar];
+    const btns = [
+      p.abstract ? `<button class="btn" data-t="a${p.n}">📖 Abstract ▾</button>` : "",
+      p.bibtex   ? `<button class="btn" data-t="b${p.n}">📋 BibTeX ▾</button>` : "",
+      p.url      ? `<a class="btn" href="${esc(p.url)}" target="_blank" rel="noopener">🔗 DOI</a>` : ""
+    ].join("");
+    return `<div class="pub" style="--c:${pl.color}">
+      <div class="idx">[${p.n}]</div>
+      <div>
+        <div class="tag">${esc(pl[lang].name)}</div>
+        ${p.authors?`<div>${esc(p.authors)}</div>`:""}
+        <div class="title">${esc(p.title)}</div>
+        <div class="venue">${esc(p.venue)}${p.where?` <span>, ${esc(p.where)}</span>`:""}</div>
+        ${p.keywords?.length?`<div class="kws">${p.keywords.map(k=>`<span>${esc(k)}</span>`).join("")}</div>`:""}
+        <div class="btns">${btns}</div>
+        ${p.abstract?`<div class="drawer" id="a${p.n}">${esc(p.abstract)}</div>`:""}
+        ${p.bibtex?`<pre class="drawer" id="b${p.n}">${esc(p.bibtex)}</pre>`:""}
+      </div></div>`;
+  }).join("");
+  el.querySelectorAll("button[data-t]").forEach(b=>b.onclick=()=>document.getElementById(b.dataset.t).classList.toggle("open"));
+}
+
+function renderProjects(){
+  const items = PROJECTS.filter(x=>filter==="all"||x.pillar===filter);
+  document.getElementById("proj-list").innerHTML = items.map(p=>{
+    const pl = P[p.pillar], [name,desc] = p[lang];
+    return `<div class="proj" style="--c:${pl.color}"><div class="tag">${esc(pl[lang].name)}</div><h3>${esc(name)}</h3><p>${esc(desc)}</p></div>`;
+  }).join("");
+}
+
+function renderTalks(){
+  const sec = document.getElementById("talks");
+  if(!TALKS.length){ sec.hidden = true; return; }
+  sec.hidden = false;
+  document.getElementById("talk-list").innerHTML = TALKS.map(t=>`<div class="pub" style="--c:var(--accent)"><div class="idx">▸</div><div>
+    <div class="title">${esc(t.title)}</div><div><b>${esc(t.event)}</b>${t.detail?`, <span style="color:var(--muted)">${esc(t.detail)}</span>`:""}</div>
+    ${t.slides?`<div class="btns" style="margin-top:6px"><a class="btn" href="${esc(t.slides)}">📊 Slides</a></div>`:""}</div></div>`).join("");
+}
+
+function setFilter(f){ filter=f; renderPillars(); renderFilters(); renderPubs(); renderProjects(); }
+function setLang(l){
+  lang=l; document.body.classList.toggle("vi",l==="vi"); document.documentElement.lang=l;
+  document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===l));
+  try{ localStorage.setItem("lang",l); }catch(e){}
+  setFilter(filter); renderTalks();
+}
+document.querySelectorAll(".lang button").forEach(b=>b.onclick=()=>setLang(b.dataset.lang));
+document.getElementById("yr").textContent = new Date().getFullYear();
+setLang(lang);
+</script>
 </body>
 </html>
