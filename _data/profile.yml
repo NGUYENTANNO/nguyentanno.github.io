@@ -1,0 +1,25 @@
+name: Tan-No Nguyen
+avatar: https://avatars.githubusercontent.com/u/44743864?v=4
+role_en: Lecturer, Vinh Long University of Technology Education, Vietnam · Faculty of Mechanical Engineering
+role_vi: Giảng viên, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long · Khoa Cơ khí
+badge_en: Ph.D. in Mechatronics Engineering
+badge_vi: Tiến sĩ Kỹ thuật Cơ điện tử
+bio_en: >-
+  <p>I am a Lecturer at Vinh Long University of Technology Education (VLUTE), Vietnam, in the Faculty of Mechanical Engineering, and a member of the <a href="#research">UAV Technology Research &amp; Training Center</a>. My research focuses on <strong>mechatronics</strong>, <strong>embedded systems and IoT</strong>, <strong>robotics</strong>, and <strong>motion control</strong> — from sensorless servo drives and sliding-mode control to field-oriented control of BLDC motors and connected lab platforms for students.</p>
+bio_vi: >-
+  <p>Tôi là giảng viên Khoa Cơ khí, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long (VLUTE), đồng thời là thành viên <a href="#research">Trung tâm Nghiên cứu và Đào tạo Công nghệ UAV</a>. Hướng nghiên cứu chính: <strong>cơ điện tử</strong>, <strong>hệ thống nhúng và IoT</strong>, <strong>robot</strong> và <strong>điều khiển chuyển động</strong> — từ ước lượng tốc độ không cảm biến cho servo, điều khiển trượt, đến điều khiển FOC động cơ BLDC và nền tảng thí nghiệm kết nối cho sinh viên.</p>
+orcid: https://orcid.org/0009-0007-0297-8239
+github: https://github.com/NGUYENTANNO
+email: nont@vlute.edu.vn
+cv: ""
+address_en: >-
+  <p>Faculty of Mechanical Engineering<br>Vinh Long University of Technology Education<br>73 Nguyen Hue, Vinh Long, Vietnam</p>
+address_vi: >-
+  <p>Khoa Cơ khí<br>Trường Đại học Công nghệ Kỹ thuật Vĩnh Long<br>73 Nguyễn Huệ, Vĩnh Long, Việt Nam</p>
+resume:
+  - en: "<strong>Ph.D.</strong>, Mechatronics Engineering"
+    vi: "<strong>Tiến sĩ</strong>, Kỹ thuật Cơ điện tử"
+  - en: "<strong>Lecturer</strong>, Faculty of Mechanical Engineering, Vinh Long University of Technology Education"
+    vi: "<strong>Giảng viên</strong>, Khoa Cơ khí, Trường Đại học Công nghệ Kỹ thuật Vĩnh Long"
+  - en: "<strong>Member</strong>, UAV Technology Research &amp; Training Center"
+    vi: "<strong>Thành viên</strong>, Trung tâm Nghiên cứu và Đào tạo Công nghệ UAV"
