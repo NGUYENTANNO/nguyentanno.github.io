@@ -1,0 +1,36 @@
+- pillar: iot
+  name_en: IoT Lab Platform
+  name_vi: Nền tảng thí nghiệm IoT
+  text_en: MQTT, Node-RED and InfluxDB server supporting 40 student groups in embedded & IoT courses.
+  text_vi: Máy chủ MQTT, Node-RED và InfluxDB phục vụ 40 nhóm sinh viên các học phần nhúng & IoT.
+  link: ""
+- pillar: motion
+  name_en: FOC Motion Control Bench
+  name_vi: Bàn thí nghiệm điều khiển FOC
+  text_en: Position/speed control of gimbal BLDC motors with ESP32-S3, SimpleFOC and magnetic encoders.
+  text_vi: Điều khiển vị trí/tốc độ động cơ BLDC gimbal với ESP32-S3, SimpleFOC và encoder từ.
+  link: ""
+- pillar: motion
+  name_en: Distributed Wireless Multi-Axis Control
+  name_vi: Điều khiển đa trục phân tán không dây
+  text_en: Six single-motor axis modules coordinated by a central ESP32-S3 over wireless links.
+  text_vi: Sáu module trục đơn động cơ được điều phối bởi ESP32-S3 trung tâm qua kết nối không dây.
+  link: ""
+- pillar: edu
+  name_en: EDUKIT ESP32-S3
+  name_vi: EDUKIT ESP32-S3
+  text_en: Teaching board with CAN, RS-485, sensor ports and OLED for microcontroller labs.
+  text_vi: Bo mạch giảng dạy có CAN, RS-485, cổng cảm biến và OLED cho các bài thí nghiệm vi điều khiển.
+  link: ""
+- pillar: robotics
+  name_en: Companion Robot for Children
+  name_vi: Robot bạn đồng hành cho trẻ em
+  text_en: ESP32 tracked robot car that talks with children and shows emotions.
+  text_vi: Xe robot bánh xích ESP32 trò chuyện với trẻ và thể hiện cảm xúc.
+  link: ""
+- pillar: robotics
+  name_en: Quadrotor Trajectory Tracking
+  name_vi: Bám quỹ đạo cho quadrotor
+  text_en: Sliding-mode control of a quadrotor with varying payload, validated with Gazebo HIL.
+  text_vi: Điều khiển trượt quadrotor với tải trọng thay đổi, kiểm chứng bằng Gazebo HIL.
+  link: ""
